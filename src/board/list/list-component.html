@@ -1,0 +1,11 @@
+<div class="list-container">
+  <div class="list-header">
+    {{list.title}}
+  </div>
+  <div class="mt-3">
+    <div *ngFor="let item of list.items">
+      <!-- {{item.title}} -->
+      <app-list-item></app-list-item>
+    </div>
+  </div>
+</div>

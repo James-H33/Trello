@@ -1,1 +1,19 @@
-<h1>I am a Board Component</h1>
+<div>
+  <div class="mb-3">
+    <span 
+      *ngIf="!isEditTitle" 
+      class="board-title text-white" 
+      (click)="toggleEditTitle()">
+      {{title}}
+    </span>
+    <input 
+      *ngIf="isEditTitle" 
+      type="text" 
+      [value]="title" 
+      (keyup.enter)="toggleEditTitle()" 
+      [(ngModel)]="title">
+  </div>
+  <div>
+    <app-list></app-list>
+  </div>
+</div>
