@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class BoardComponent {
+  public isEditTitle: boolean = false;
+  public title: string = 'James Board';
+ 
   constructor() { }
+
+  public toggleEditTitle() {
+    this.isEditTitle = !this.isEditTitle;
+  }
 }
