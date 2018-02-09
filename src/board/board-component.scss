@@ -1,24 +1,23 @@
 @import '../styles/vars';
 
-.board-title {
-  font-size: 24px;
-  display: inline-block;
-  padding: 8px 24px;
-  border-radius: 5px;
-  cursor: pointer;
+:host ::ng-deep app-toggle-input#add-list {
+  span {
+    @extend .toggle-input-title;
+    font-size: 16px;
+  }
 
-  &:hover {
-    background-color: $primary-dark;
+  input {
+    @extend .toggle-input-input;
+    font-size: 16px;
   }
 }
 
-input {
-  color: white;
-  font-size: 24px;
-  display: inline-block;
-  padding: 8px 24px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  background-color: $primary-dark;
+:host ::ng-deep app-toggle-input#board-title {
+  span {
+    @extend .toggle-input-title;
+  }
+
+  input {
+    @extend .toggle-input-input;
+  }
 }

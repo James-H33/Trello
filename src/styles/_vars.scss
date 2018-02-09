@@ -1,3 +1,27 @@
 $primary: #b04532;
 $primary-dark: #993725;
 $clearWhite: rgba(255, 255, 255, 0.3);
+
+.toggle-input-title {
+  color: #fff;
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+
+.toggle-input-input {
+  color: white;
+  font-size: 24px;
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: $primary-dark;
+}

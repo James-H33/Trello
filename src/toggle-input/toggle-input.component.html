@@ -1,0 +1,12 @@
+<span 
+  *ngIf="!isEditTitle" 
+  class="title-container" 
+  (click)="toggleEdit()">
+  {{title}}
+</span>
+<input 
+  *ngIf="isEditTitle"
+  class="input-box"
+  type="text" 
+  [value]="title" 
+  (keyup.enter)="updateTitle($event.target.value)">    
