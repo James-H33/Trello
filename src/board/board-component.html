@@ -1,19 +1,20 @@
 <div>
   <div class="mb-3">
-    <span 
-      *ngIf="!isEditTitle" 
-      class="board-title text-white" 
-      (click)="toggleEditTitle()">
-      {{title}}
-    </span>
-    <input 
-      *ngIf="isEditTitle" 
-      type="text" 
-      [value]="title" 
-      (keyup.enter)="toggleEditTitle()" 
-      [(ngModel)]="title">
+    <app-toggle-input 
+      id="board-title" 
+      [title]="title" 
+      (titleUpdated$)="updateBoardTitle($event)">
+    </app-toggle-input>
   </div>
-  <div>
-    <app-list></app-list>
+  
+  <div class="row">
+    <app-list *ngFor="let list of lists" [list]="list"></app-list>
+    <div>
+      <app-toggle-input 
+        id="add-list" 
+        [title]="'Add List'" 
+        (titleUpdated$)="addNewList($event)">
+      </app-toggle-input>
+    </div>
   </div>
 </div>

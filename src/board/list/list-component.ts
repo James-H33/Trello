@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -7,23 +7,20 @@ import { Component } from '@angular/core';
 })
 
 export class ListComponent {
-  public list: any;
+  @Input() list: any = [];
 
-  constructor() {
-    this.list = {
-      title: 'Message Board',
-      items: [
-        {
-          id: 1,
-          title: 'Some Test Checklist',
-          resources: []
-        },
-        {
-          id: 2,
-          title: 'Another Checklist',
-          resources: []
-        },
-      ]
-    };
+  constructor() {}
+
+  public addCard() {
+    console.log(this.list);
+    this.list.cards.push({
+      id: Math.floor(Math.random() * 100) ,
+      title: 'Another One',
+      resources: []
+    });
+  }
+
+  public updateListTitle(title: string) {
+    this.list.title = title;
   }
 }
