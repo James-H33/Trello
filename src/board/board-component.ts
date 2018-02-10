@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DragulaService } from 'ng2-dragula';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'app-board',
@@ -10,8 +12,10 @@ export class BoardComponent {
   public isEditTitle: boolean = false;
   public title: string = 'James Board';
   public lists: any[] = [];
+  public updatedList$: Subject<any> = new Subject(); 
  
-  constructor() { 
+  constructor(private dragulaService: DragulaService) { 
+    this.updatedList$.subscribe((x) => this.listUpdated(x));
     this.lists = [
       {
         id: 1,
@@ -28,12 +32,49 @@ export class BoardComponent {
             resources: []
           }
         ]
-      }
+      },
+      {
+        id: 2,
+        title: 'James List',
+        cards: [
+          {
+            id: 1,
+            title: 'Some Test Checklist',
+            resources: []
+          },
+          {
+            id: 2,
+            title: 'Another Checklist',
+            resources: []
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: 'Board List',
+        cards: [
+          {
+            id: 1,
+            title: 'Some Test Checklist',
+            resources: []
+          },
+          {
+            id: 2,
+            title: 'Another Checklist',
+            resources: []
+          }
+        ]
+      },
     ];
   }
 
   public updateBoardTitle(title: string) {
     this.title = title;
+  }
+
+  public listUpdated(list: any) {
+    const listIndex = this.lists.findIndex((l) => l.id === list.id);
+    this.lists.splice(listIndex, 1, list);
   }
 
   public addNewList(title: string) {

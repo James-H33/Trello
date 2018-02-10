@@ -6,8 +6,11 @@
       (titleUpdated$)="updateListTitle($event)">
     </app-toggle-input>  </div>
   <div class="mt-3">
-    <div *ngFor="let card of list.cards">
-      <app-card [card]="card"></app-card>
+    <div [dragula]='list.id' [dragulaModel]='list.cards'>
+      <app-card
+        *ngFor="let card of list.cards; let i = index;" 
+        [card]="card">
+      </app-card>
     </div>
     <a href="#" class="d-flex p-2" (click)="addCard()">
       Add Card
