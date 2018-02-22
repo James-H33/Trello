@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'vars';
 @import '~font-awesome/css/font-awesome.css';
-// @import '../node_modules/font-awesome/css/font-awesome.css';
 @import '~bootstrap/scss/bootstrap';
+@import '~dragula/dist/dragula.css';
 
 body {
   background-color: $primary;

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { DragulaModule } from 'ng2-dragula';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BoardComponent } from '../board/board-component';
@@ -22,6 +24,7 @@ import { ToggleInputComponent } from '../toggle-input/toggle-input.component';
   imports: [
     FormsModule,
     BrowserModule,
+    DragulaModule,
     AppRoutingModule
   ],
   providers: [],
