@@ -23,12 +23,12 @@ export class BoardComponent {
         cards: [
           {
             id: 1,
-            title: 'Some Test Checklist',
+            title: 'Some Test Checklist 1',
             resources: []
           },
           {
             id: 2,
-            title: 'Another Checklist',
+            title: 'Another Checklist 1',
             resources: []
           }
         ]
@@ -39,12 +39,12 @@ export class BoardComponent {
         cards: [
           {
             id: 1,
-            title: 'Some Test Checklist',
+            title: 'Some Checklist 2',
             resources: []
           },
           {
             id: 2,
-            title: 'Another Checklist',
+            title: 'Another 2',
             resources: []
           }
         ]
@@ -55,12 +55,12 @@ export class BoardComponent {
         cards: [
           {
             id: 1,
-            title: 'Some Test Checklist',
+            title: 'Test Checklist 3',
             resources: []
           },
           {
             id: 2,
-            title: 'Another Checklist',
+            title: 'Checklist 4',
             resources: []
           }
         ]
