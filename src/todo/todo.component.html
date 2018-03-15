@@ -1,0 +1,13 @@
+<div>
+  TODO List: 
+  <div>
+    <div *ngFor="let todo of resource.todos">
+      <div class="row py-2 align-items-center">
+        <input class="col-1" type="checkbox" [checked]="todo.isComplete">
+        <div class="col">
+          {{todo.title}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
