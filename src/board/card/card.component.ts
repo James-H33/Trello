@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-card',
@@ -9,5 +10,10 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() public card: any;
 
-  constructor() { }
+  constructor(private _modalService: ModalService) { }
+
+  public openModal() {
+    this._modalService.activate();
+    this._modalService.updateContent(this.card);
+  }
 }

@@ -25,11 +25,6 @@ export class BoardComponent {
             id: 1,
             title: 'Some Test Checklist 1',
             resources: []
-          },
-          {
-            id: 2,
-            title: 'Another Checklist 1',
-            resources: []
           }
         ]
       },
@@ -40,7 +35,30 @@ export class BoardComponent {
           {
             id: 1,
             title: 'Some Checklist 2',
-            resources: []
+            resources: [
+              {
+                template: 'date',
+              },
+              {
+                template: 'description',
+              },
+              {
+                template: 'todo',
+                todos: [
+                  {
+                    title: 'take out trash',
+                    isComplete: true,
+                  },
+                  {
+                    title: 'Read book',
+                    isComplete: false,
+                  }
+                ]
+              },
+              {
+                template: 'comments',
+              },
+            ]
           },
           {
             id: 2,
@@ -48,23 +66,7 @@ export class BoardComponent {
             resources: []
           }
         ]
-      },
-      {
-        id: 3,
-        title: 'Board List',
-        cards: [
-          {
-            id: 1,
-            title: 'Test Checklist 3',
-            resources: []
-          },
-          {
-            id: 2,
-            title: 'Checklist 4',
-            resources: []
-          }
-        ]
-      },
+      }
     ];
   }
 

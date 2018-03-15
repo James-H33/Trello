@@ -11,6 +11,9 @@ import { ListComponent } from '../board/list/list-component';
 import { CardComponent } from '../board/card/card.component';
 import { NavigationComponent } from '../navigation/navigation-component';
 import { ToggleInputComponent } from '../toggle-input/toggle-input.component';
+import { ModalComponent } from '../modal/modal.component';
+import { ModalService } from '../services/modal.service';
+import { TodoComponent } from '../todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,8 @@ import { ToggleInputComponent } from '../toggle-input/toggle-input.component';
     BoardComponent,
     ListComponent,
     CardComponent,
+    TodoComponent,
+    ModalComponent,
     ToggleInputComponent,
     NavigationComponent
   ],
@@ -27,7 +32,9 @@ import { ToggleInputComponent } from '../toggle-input/toggle-input.component';
     DragulaModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ModalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
