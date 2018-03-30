@@ -13,7 +13,6 @@ export class TodoComponent {
     todos: []
   };
 
-
   public todos: string[] = ['Take out trash', 'Read book!'];
 
   constructor() { }
