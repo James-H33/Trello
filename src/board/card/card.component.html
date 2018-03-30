@@ -1,3 +1,8 @@
 <div class="mt-3 item-container" (click)="openModal()">
   <span>{{card.title}}</span>
+  <span 
+    class="item-container-icon text-danger font-weight" 
+    [ngClass]="{'active' : isDeleteActivated }"
+    (click)="onDelete()"
+    >X</span>
 </div>

@@ -4,16 +4,25 @@
       id="list-toggle-input" 
       [title]="list.title" 
       (titleUpdated$)="updateListTitle($event)">
-    </app-toggle-input>  </div>
+    </app-toggle-input>  
+  </div>
   <div class="wrapper mt-3">
     <div [dragula]='list.id' [dragulaModel]='list.cards'>
       <app-card
         *ngFor="let card of list.cards; let i = index;" 
+        [index]="i"
+        [isDeleteActivated]="isDeleting"
+        [cardDeleted]="cardDeleted$"
         [card]="card">
       </app-card>
     </div>
-    <a href="#" class="d-flex p-2" (click)="addCard()">
-      Add Card
-    </a>
+    <div class="mt-2 d-flex justify-content-between">
+      <a href="#" class="p-2" (click)="addCard()">
+        Add Card
+      </a>
+      <a href="#" class="p-2" (click)="toggleCardDeletion()">
+        Delete
+      </a>
+    </div>
   </div>
 </div>

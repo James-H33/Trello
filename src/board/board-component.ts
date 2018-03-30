@@ -18,17 +18,6 @@ export class BoardComponent {
     this.updatedList$.subscribe((x) => this.listUpdated(x));
     this.lists = [
       {
-        id: 1,
-        title: 'James Board List',
-        cards: [
-          {
-            id: 1,
-            title: 'Some Test Checklist 1',
-            resources: []
-          }
-        ]
-      },
-      {
         id: 2,
         title: 'James List',
         cards: [
@@ -38,6 +27,7 @@ export class BoardComponent {
             resources: [
               {
                 template: 'date',
+                value: '03/20/2018'
               },
               {
                 template: 'description',
@@ -63,7 +53,12 @@ export class BoardComponent {
           {
             id: 2,
             title: 'Another 2',
-            resources: []
+            resources: [
+              {
+                template: 'date',
+                value: '03/20/2018'
+              },
+            ]
           }
         ]
       }
